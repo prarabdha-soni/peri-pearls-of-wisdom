@@ -1,9 +1,24 @@
-import { Flame, Calendar, Brain, Moon, Droplet, Cloud, Zap, Weight } from "lucide-react";
+import { Flame, Calendar, Brain, Moon, Droplet, Cloud, Zap, Weight, Sparkles, User } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const symptoms = [
+  {
+    icon: Weight,
+    title: "Weight Changes",
+    description: "Unexplained weight gain, especially around the midsection.",
+  },
+  {
+    icon: Sparkles,
+    title: "Hair Changes",
+    description: "Thinning hair, hair loss, or changes in hair texture and growth.",
+  },
+  {
+    icon: User,
+    title: "Skin Changes",
+    description: "Dryness, increased wrinkles, or changes in skin texture and elasticity.",
+  },
   {
     icon: Flame,
     title: "Hot Flashes",
@@ -38,11 +53,6 @@ const symptoms = [
     icon: Zap,
     title: "Fatigue",
     description: "Persistent tiredness or lack of energy despite adequate rest.",
-  },
-  {
-    icon: Weight,
-    title: "Weight Changes",
-    description: "Unexplained weight gain, especially around the midsection.",
   },
 ];
 
