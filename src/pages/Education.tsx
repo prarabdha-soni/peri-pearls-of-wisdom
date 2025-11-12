@@ -11,11 +11,40 @@ const Education = () => {
     <div className="min-h-screen bg-background px-4 py-8">
       <div className="mx-auto max-w-3xl">
         <h1 className="mb-2 text-4xl font-bold text-foreground">
-          Understanding Your Symptoms
+          Your Journey Through Menopause
         </h1>
-        <p className="mb-8 text-muted-foreground">
-          Evidence-based information about perimenopause symptoms and management
+        <p className="mb-4 text-muted-foreground">
+          Evidence-based information about perimenopause, menopause, and post-menopause care
         </p>
+        
+        <Card className="mb-8 border-border bg-card p-6">
+          <h2 className="mb-4 text-xl font-bold text-foreground">Understanding the Stages</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-2 font-semibold text-card-foreground">Perimenopause (Transition Phase)</h3>
+              <p className="text-sm text-muted-foreground">
+                Usually begins in your 40s. Hormones fluctuate, causing irregular periods and various symptoms. 
+                Can last 4-8 years.
+              </p>
+            </div>
+            <Separator className="bg-border" />
+            <div>
+              <h3 className="mb-2 font-semibold text-card-foreground">Menopause (The Milestone)</h3>
+              <p className="text-sm text-muted-foreground">
+                Officially reached after 12 consecutive months without a period. Average age is 51, 
+                but can occur earlier or later.
+              </p>
+            </div>
+            <Separator className="bg-border" />
+            <div>
+              <h3 className="mb-2 font-semibold text-card-foreground">Post-Menopause (Life After)</h3>
+              <p className="text-sm text-muted-foreground">
+                The years following menopause. Some symptoms may ease, but bone health and heart health 
+                become important focuses.
+              </p>
+            </div>
+          </div>
+        </Card>
 
         <Card className="mb-8 border-2 border-primary bg-gradient-to-br from-primary/5 to-primary/10 p-8">
           <div className="mb-6 flex items-center gap-3">
@@ -161,10 +190,11 @@ const Education = () => {
 
         <div className="mb-6">
           <h2 className="mb-4 text-2xl font-bold text-foreground">
-            Other Common Symptoms
+            Common Symptoms Across All Stages
           </h2>
           <p className="mb-6 text-muted-foreground">
-            Perimenopause affects women differently. Here are other symptoms you might experience:
+            Every woman's experience is unique. Here are symptoms that may occur during perimenopause, 
+            menopause, or post-menopause:
           </p>
         </div>
 
@@ -179,11 +209,12 @@ const Education = () => {
               </h3>
             </div>
             <p className="mb-3 text-sm text-muted-foreground">
-              Sudden feelings of intense heat, often with sweating and rapid heartbeat.
+              Sudden feelings of intense heat, often with sweating and rapid heartbeat. Can continue 
+              into post-menopause but usually decrease over time.
             </p>
             <p className="text-sm text-muted-foreground">
               <strong>Tips:</strong> Wear cotton clothing, stay hydrated with coconut water,
-              practice cooling pranayama breathing.
+              practice cooling pranayama breathing. Layer clothing for easy adjustment.
             </p>
           </Card>
 
@@ -197,11 +228,12 @@ const Education = () => {
               </h3>
             </div>
             <p className="mb-3 text-sm text-muted-foreground">
-              Weight gain, especially around the midsection, despite no change in diet.
+              Weight gain, especially around the midsection, despite no change in diet. Metabolism 
+              slows after menopause, making weight management more important.
             </p>
             <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Include dal, sabzi, and whole grains. Try morning walks
-              or yoga. Reduce fried foods.
+              <strong>Tips:</strong> Include dal, sabzi, and whole grains. Regular exercise like 
+              morning walks or yoga. Strength training helps maintain muscle mass.
             </p>
           </Card>
 
@@ -215,11 +247,12 @@ const Education = () => {
               </h3>
             </div>
             <p className="mb-3 text-sm text-muted-foreground">
-              Irritability, anxiety, or sudden feelings of sadness without clear cause.
+              Irritability, anxiety, or sudden feelings of sadness. Emotional changes can persist 
+              into post-menopause but often stabilize.
             </p>
             <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Practice meditation, talk to loved ones, consider
-              ashwagandha (consult doctor first).
+              <strong>Tips:</strong> Practice meditation, talk to loved ones, regular exercise helps. 
+              Consider ashwagandha (consult doctor first).
             </p>
           </Card>
 
@@ -233,11 +266,12 @@ const Education = () => {
               </h3>
             </div>
             <p className="mb-3 text-sm text-muted-foreground">
-              Aches and stiffness in joints, especially in the morning.
+              Aches and stiffness in joints, especially in the morning. Risk of osteoporosis 
+              increases post-menopause, making bone health crucial.
             </p>
             <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Stay active with gentle exercises, maintain healthy weight,
-              include anti-inflammatory foods like haldi.
+              <strong>Tips:</strong> Stay active with gentle exercises, maintain healthy weight, 
+              include calcium-rich foods (milk, curd) and anti-inflammatory foods like haldi.
             </p>
           </Card>
         </div>
@@ -255,8 +289,8 @@ const Education = () => {
             Join Our Support Community
           </h2>
           <p className="mb-6 text-muted-foreground">
-            Connect with others experiencing perimenopause. Share experiences, ask questions,
-            and get peer support in a safe space.
+            Connect with women at all stages - perimenopause, menopause, and post-menopause. 
+            Share experiences, ask questions, and get peer support in a safe, understanding space.
           </p>
 
           <div className="space-y-3">
