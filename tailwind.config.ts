@@ -66,6 +66,7 @@ export default {
       backgroundImage: {
         'gradient-calm': 'var(--gradient-calm)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-waves': 'var(--gradient-waves)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

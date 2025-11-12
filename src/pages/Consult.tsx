@@ -41,7 +41,7 @@ const Consult = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background px-4 py-8">
+    <div className="min-h-screen bg-background px-4 py-8 pb-20">
       <div className="mx-auto max-w-3xl">
         <div className="mb-8 text-center">
           <h1 className="mb-2 text-4xl font-bold text-foreground">

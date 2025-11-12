@@ -1,280 +1,348 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Moon, Lightbulb, CheckCircle2, Flame, Weight, Cloud, Activity, MessageCircle, Instagram } from "lucide-react";
+import { Moon, Lightbulb, CheckCircle2, Flame, Weight, Cloud, Activity, MessageCircle, Instagram, ArrowRight, Heart, Wind, Brain, Sparkles } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Education = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background px-4 py-8">
-      <div className="mx-auto max-w-3xl">
-        <h1 className="mb-2 text-4xl font-bold text-foreground">
-          Your Journey Through Menopause
-        </h1>
-        <p className="mb-4 text-muted-foreground">
-          Evidence-based information about perimenopause, menopause, and post-menopause care
-        </p>
+    <div className="min-h-screen bg-gradient-calm relative overflow-hidden px-4 py-8 pb-20">
+      {/* Floating decorative elements */}
+      <div className="absolute top-10 right-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float" />
+      <div className="absolute bottom-20 left-10 w-16 h-16 bg-secondary/10 rounded-full blur-xl animate-float-slow" />
+
+      <div className="relative z-10 mx-auto max-w-5xl">
+        <div className="mb-8 text-center">
+          <h1 className="mb-2 text-4xl font-bold text-foreground">
+            Your Journey Through Menopause
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Evidence-based information about perimenopause, menopause, and post-menopause care
+          </p>
+        </div>
         
-        <Card className="mb-8 border-border bg-card p-6">
-          <h2 className="mb-4 text-xl font-bold text-foreground">Understanding the Stages</h2>
-          <div className="space-y-4">
-            <div>
-              <h3 className="mb-2 font-semibold text-card-foreground">Perimenopause (Transition Phase)</h3>
-              <p className="text-sm text-muted-foreground">
-                Usually begins in your 40s. Hormones fluctuate, causing irregular periods and various symptoms. 
-                Can last 4-8 years.
-              </p>
-            </div>
-            <Separator className="bg-border" />
-            <div>
-              <h3 className="mb-2 font-semibold text-card-foreground">Menopause (The Milestone)</h3>
-              <p className="text-sm text-muted-foreground">
-                Officially reached after 12 consecutive months without a period. Average age is 51, 
-                but can occur earlier or later.
-              </p>
-            </div>
-            <Separator className="bg-border" />
-            <div>
-              <h3 className="mb-2 font-semibold text-card-foreground">Post-Menopause (Life After)</h3>
-              <p className="text-sm text-muted-foreground">
-                The years following menopause. Some symptoms may ease, but bone health and heart health 
-                become important focuses.
-              </p>
-            </div>
-          </div>
+        {/* Interactive Timeline */}
+        <Card className="mb-8 border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft">
+          <h2 className="mb-6 text-2xl font-bold text-foreground text-center">
+            Understanding the Stages
+          </h2>
+          
+          <Tabs defaultValue="perimenopause" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-6">
+              <TabsTrigger value="perimenopause" className="text-sm md:text-base">
+                Perimenopause
+              </TabsTrigger>
+              <TabsTrigger value="menopause" className="text-sm md:text-base">
+                Menopause
+              </TabsTrigger>
+              <TabsTrigger value="postmenopause" className="text-sm md:text-base">
+                Post-Menopause
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="perimenopause" className="space-y-4">
+              <div className="rounded-lg bg-primary/5 p-6 border border-primary/20">
+                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Moon className="h-5 w-5 text-primary" />
+                  Perimenopause (Transition Phase)
+                </h3>
+                <p className="mb-4 text-muted-foreground leading-relaxed">
+                  Usually begins in your 40s. Hormones fluctuate, causing irregular periods and various symptoms. 
+                  Can last 4-8 years. This is a natural phase where your body is adapting to hormonal changes.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-card-foreground">Common Symptoms:</h4>
+                  <ul className="space-y-1.5 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span>Irregular periods</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span>Hot flashes and night sweats</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span>Sleep disturbances</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span>Mood changes</span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="mt-4 text-sm italic text-primary/80">
+                  💫 Your body is adapting, this too shall pass.
+                </p>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="menopause" className="space-y-4">
+              <div className="rounded-lg bg-secondary/5 p-6 border border-secondary/20">
+                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Heart className="h-5 w-5 text-secondary" />
+                  Menopause (The Milestone)
+                </h3>
+                <p className="mb-4 text-muted-foreground leading-relaxed">
+                  Officially reached after 12 consecutive months without a period. Average age is 51, 
+                  but can occur earlier or later. This is a significant milestone in your life journey.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-card-foreground">What to Expect:</h4>
+                  <ul className="space-y-1.5 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span>Periods stop completely</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span>Some symptoms may continue</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                      <span>Focus on bone and heart health</span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="mt-4 text-sm italic text-secondary/80">
+                  💫 You've reached an important milestone. Celebrate your strength.
+                </p>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="postmenopause" className="space-y-4">
+              <div className="rounded-lg bg-accent/5 p-6 border border-accent/20">
+                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-accent" />
+                  Post-Menopause (Life After)
+                </h3>
+                <p className="mb-4 text-muted-foreground leading-relaxed">
+                  The years following menopause. Some symptoms may ease, but bone health and heart health 
+                  become important focuses. This is a time for continued self-care and wellness.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-card-foreground">Focus Areas:</h4>
+                  <ul className="space-y-1.5 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                      <span>Bone density maintenance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                      <span>Cardiovascular health</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                      <span>Continued symptom management</span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="mt-4 text-sm italic text-accent/80">
+                  💫 Your journey continues with wisdom and grace.
+                </p>
+              </div>
+            </TabsContent>
+          </Tabs>
         </Card>
 
-        <Card className="mb-8 border-2 border-primary bg-gradient-to-br from-primary/5 to-primary/10 p-8">
+        {/* Symptom-Specific Modules */}
+        <div className="mb-8">
+          <h2 className="mb-6 text-2xl font-bold text-foreground text-center">
+            Symptom-Specific Support
+          </h2>
+          <p className="mb-6 text-center text-muted-foreground">
+            Explore detailed guidance for managing specific symptoms with supplements, nutrition, lifestyle tips, and calming practices
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Sleep Module */}
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="rounded-full bg-primary/20 p-3">
+                  <Moon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  Sleep Support
+                </h3>
+              </div>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Detailed content plus calming meditations, nature sounds for sleep, and nutrition tips to help you rest peacefully.
+              </p>
+              <Button
+                onClick={() => navigate("/symptoms/sleep")}
+                variant="outline"
+                className="w-full"
+              >
+                Explore Sleep Solutions
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+
+            {/* Hot Flashes Module */}
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="rounded-full bg-accent/20 p-3">
+                  <Flame className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  Hot Flashes
+                </h3>
+              </div>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Breathing exercises, cooling advice, and mindset affirmations to help you manage hot flashes with ease.
+              </p>
+              <Button
+                onClick={() => navigate("/symptoms/hot-flashes")}
+                variant="outline"
+                className="w-full"
+              >
+                Learn Cooling Techniques
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+
+            {/* Weight & Metabolism Module */}
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="rounded-full bg-secondary/20 p-3">
+                  <Weight className="h-6 w-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  Weight & Metabolism
+                </h3>
+              </div>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Practical diet & exercise advice, mindful eating guides, and metabolism support strategies.
+              </p>
+              <Button
+                onClick={() => navigate("/symptoms/weight")}
+                variant="outline"
+                className="w-full"
+              >
+                Discover Weight Management
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+
+            {/* Emotional Wellness Module */}
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="rounded-full bg-primary/20 p-3">
+                  <Brain className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  Emotional Wellness
+                </h3>
+              </div>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Mood tracking, spiritual stories or quotes, stress relief techniques, and emotional support.
+              </p>
+              <Button
+                onClick={() => navigate("/symptoms/emotional")}
+                variant="outline"
+                className="w-full"
+              >
+                Nurture Your Mind
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+          </div>
+        </div>
+
+        {/* Common Symptoms Overview */}
+        <Card className="mb-8 border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10 p-8">
           <div className="mb-6 flex items-center gap-3">
             <div className="rounded-full bg-primary/20 p-3">
-              <Moon className="h-8 w-8 text-primary" />
+              <Lightbulb className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-3xl font-bold text-foreground">
-              Sleep Disturbances
+              Common Symptoms Across All Stages
             </h2>
           </div>
 
-          <div className="space-y-6">
-            <div>
-              <h3 className="mb-3 flex items-center gap-2 text-xl font-semibold text-card-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                What It Feels Like
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Difficulty falling asleep despite feeling tired, waking up multiple times during the night,
-                or waking up very early and being unable to fall back asleep. You may feel exhausted even
-                after a full night's rest.
-              </p>
-            </div>
-
-            <Separator className="bg-border" />
-
-            <div>
-              <h3 className="mb-3 flex items-center gap-2 text-xl font-semibold text-card-foreground">
-                <Lightbulb className="h-5 w-5 text-primary" />
-                Why It Happens
-              </h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  <span>
-                    <strong>Hormonal Changes:</strong> Declining estrogen and progesterone levels disrupt
-                    your body's natural sleep-wake cycle
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  <span>
-                    <strong>Night Sweats:</strong> Hot flashes during sleep can wake you suddenly, leaving
-                    you drenched and uncomfortable
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                  <span>
-                    <strong>Increased Stress:</strong> Anxiety and mood changes common in perimenopause
-                    can make it harder to relax
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <Separator className="bg-border" />
-
-            <div>
-              <h3 className="mb-3 flex items-center gap-2 text-xl font-semibold text-card-foreground">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                Tips to Improve Sleep
-              </h3>
-
-              <div className="space-y-4">
-                <div>
-                  <h4 className="mb-2 font-semibold text-card-foreground">Sleep Environment</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Keep your bedroom cool with a fan or air conditioning</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Use breathable cotton bedding and nightwear</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Block out light with curtains or an eye mask</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Reduce noise with earplugs or white noise</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="mb-2 font-semibold text-card-foreground">Nutrition & Timing</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Avoid tea, coffee, and caffeinated drinks after 4 PM</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Try warm haldi doodh (turmeric milk) before bedtime</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Eat a light dinner at least 2-3 hours before sleep</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Include magnesium-rich foods: almonds, bananas, spinach</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="mb-2 font-semibold text-card-foreground">Relaxation Practices</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Practice pranayama or deep breathing exercises</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Try gentle yoga or stretching before bed</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Establish a consistent sleep schedule</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
-                      <span>Avoid screens for at least 30 minutes before sleep</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <Button
-            onClick={() => navigate("/consult")}
-            className="mt-6 w-full bg-primary text-primary-foreground hover:bg-primary/90"
-            size="lg"
-          >
-            Talk to a Sleep Specialist
-          </Button>
-        </Card>
-
-        <div className="mb-6">
-          <h2 className="mb-4 text-2xl font-bold text-foreground">
-            Common Symptoms Across All Stages
-          </h2>
           <p className="mb-6 text-muted-foreground">
             Every woman's experience is unique. Here are symptoms that may occur during perimenopause, 
             menopause, or post-menopause:
           </p>
-        </div>
 
-        <div className="mb-8 grid gap-4 md:grid-cols-2">
-          <Card className="border-border bg-card p-6">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="rounded-full bg-accent/10 p-2">
-                <Flame className="h-5 w-5 text-accent" />
+          <div className="grid gap-4 md:grid-cols-2">
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-accent/10 p-2">
+                  <Flame className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold text-card-foreground">
+                  Hot Flashes
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground">
-                Hot Flashes
-              </h3>
-            </div>
-            <p className="mb-3 text-sm text-muted-foreground">
-              Sudden feelings of intense heat, often with sweating and rapid heartbeat. Can continue 
-              into post-menopause but usually decrease over time.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Wear cotton clothing, stay hydrated with coconut water,
-              practice cooling pranayama breathing. Layer clothing for easy adjustment.
-            </p>
-          </Card>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Sudden feelings of intense heat, often with sweating and rapid heartbeat.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Tips:</strong> Wear cotton clothing, stay hydrated with coconut water,
+                practice cooling pranayama breathing.
+              </p>
+            </Card>
 
-          <Card className="border-border bg-card p-6">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="rounded-full bg-accent/10 p-2">
-                <Weight className="h-5 w-5 text-accent" />
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-accent/10 p-2">
+                  <Weight className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold text-card-foreground">
+                  Weight Changes
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground">
-                Weight Changes
-              </h3>
-            </div>
-            <p className="mb-3 text-sm text-muted-foreground">
-              Weight gain, especially around the midsection, despite no change in diet. Metabolism 
-              slows after menopause, making weight management more important.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Include dal, sabzi, and whole grains. Regular exercise like 
-              morning walks or yoga. Strength training helps maintain muscle mass.
-            </p>
-          </Card>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Weight gain, especially around the midsection, despite no change in diet.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Tips:</strong> Include dal, sabzi, and whole grains. Regular exercise like 
+                morning walks or yoga.
+              </p>
+            </Card>
 
-          <Card className="border-border bg-card p-6">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="rounded-full bg-accent/10 p-2">
-                <Cloud className="h-5 w-5 text-accent" />
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-accent/10 p-2">
+                  <Cloud className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold text-card-foreground">
+                  Mood Swings
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground">
-                Mood Swings
-              </h3>
-            </div>
-            <p className="mb-3 text-sm text-muted-foreground">
-              Irritability, anxiety, or sudden feelings of sadness. Emotional changes can persist 
-              into post-menopause but often stabilize.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Practice meditation, talk to loved ones, regular exercise helps. 
-              Consider ashwagandha (consult doctor first).
-            </p>
-          </Card>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Irritability, anxiety, or sudden feelings of sadness.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Tips:</strong> Practice meditation, talk to loved ones, regular exercise helps. 
+                Consider ashwagandha (consult doctor first).
+              </p>
+            </Card>
 
-          <Card className="border-border bg-card p-6">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="rounded-full bg-accent/10 p-2">
-                <Activity className="h-5 w-5 text-accent" />
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm p-4">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-accent/10 p-2">
+                  <Activity className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold text-card-foreground">
+                  Joint Pain
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-card-foreground">
-                Joint Pain
-              </h3>
-            </div>
-            <p className="mb-3 text-sm text-muted-foreground">
-              Aches and stiffness in joints, especially in the morning. Risk of osteoporosis 
-              increases post-menopause, making bone health crucial.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              <strong>Tips:</strong> Stay active with gentle exercises, maintain healthy weight, 
-              include calcium-rich foods (milk, curd) and anti-inflammatory foods like haldi.
-            </p>
-          </Card>
-        </div>
+              <p className="mb-2 text-sm text-muted-foreground">
+                Aches and stiffness in joints, especially in the morning.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Tips:</strong> Stay active with gentle exercises, maintain healthy weight, 
+                include calcium-rich foods (milk, curd) and anti-inflammatory foods like haldi.
+              </p>
+            </Card>
+          </div>
+        </Card>
 
         <Button
           onClick={() => navigate("/consult")}
@@ -284,11 +352,12 @@ const Education = () => {
           Connect with a Specialist
         </Button>
 
-        <Card className="border-border bg-gradient-to-br from-secondary/5 to-accent/5 p-8">
-          <h2 className="mb-4 text-2xl font-bold text-foreground">
+        {/* Community Support */}
+        <Card className="border-border/50 bg-gradient-to-br from-secondary/5 to-accent/5 p-8 shadow-soft">
+          <h2 className="mb-4 text-2xl font-bold text-foreground text-center">
             Join Our Support Community
           </h2>
-          <p className="mb-6 text-muted-foreground">
+          <p className="mb-6 text-center text-muted-foreground">
             Connect with women at all stages - perimenopause, menopause, and post-menopause. 
             Share experiences, ask questions, and get peer support in a safe, understanding space.
           </p>
@@ -317,7 +386,7 @@ const Education = () => {
               size="lg"
             >
               <a
-                href="https://instagram.com/your_page"
+                href="https://www.instagram.com/nishu_health"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2"
