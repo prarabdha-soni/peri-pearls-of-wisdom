@@ -8,25 +8,25 @@ const Nutrition = () => {
 
   const nutritionCategories = [
     {
-      title: "Essential Nutrients",
+      title: "Essential Nutrients (Vegetarian)",
       icon: Apple,
       color: "primary",
       items: [
-        "Calcium: Dairy products, leafy greens, fortified foods",
-        "Vitamin D: Sunlight, fatty fish, fortified milk",
-        "Magnesium: Nuts, seeds, whole grains, dark chocolate",
-        "Iron: Lentils, spinach, lean meats, fortified cereals",
+        "Calcium: Dairy products (milk, curd, paneer), leafy greens (spinach, kale), fortified foods",
+        "Vitamin D: Sunlight exposure, fortified milk, fortified cereals",
+        "Magnesium: Nuts (almonds, cashews), seeds (pumpkin, sunflower), whole grains, dark chocolate",
+        "Iron: Lentils (dal), spinach, beans, fortified cereals, dates",
       ],
     },
     {
-      title: "Hormone-Balancing Foods",
+      title: "Hormone-Balancing Foods (Vegetarian)",
       icon: Leaf,
       color: "secondary",
       items: [
-        "Phytoestrogens: Soy products, flaxseeds, sesame seeds",
-        "Omega-3 Fatty Acids: Fatty fish, walnuts, chia seeds",
-        "Fiber: Whole grains, fruits, vegetables, legumes",
-        "Antioxidants: Berries, green tea, colorful vegetables",
+        "Phytoestrogens: Soy products (tofu, soy milk), flaxseeds, sesame seeds",
+        "Omega-3 Fatty Acids: Walnuts, chia seeds, flaxseeds, hemp seeds",
+        "Fiber: Whole grains (brown rice, oats), fruits, vegetables, legumes (dal, chickpeas)",
+        "Antioxidants: Berries, green tea, colorful vegetables (carrots, bell peppers, tomatoes)",
       ],
     },
     {
@@ -44,39 +44,43 @@ const Nutrition = () => {
 
   const mealIdeas = [
     {
-      meal: "Breakfast",
+      meal: "Breakfast (Vegetarian)",
       suggestions: [
         "Oats with berries and nuts",
-        "Greek yogurt with fruits and seeds",
-        "Whole grain toast with avocado",
-        "Smoothie with spinach, banana, and protein",
+        "Curd/yogurt with fruits and seeds",
+        "Whole grain toast with avocado or paneer",
+        "Smoothie with spinach, banana, and plant-based protein",
+        "Poha with vegetables and peanuts",
       ],
     },
     {
-      meal: "Lunch",
+      meal: "Lunch (Vegetarian)",
       suggestions: [
         "Dal with brown rice and sabzi",
         "Quinoa salad with vegetables",
-        "Grilled fish with vegetables",
+        "Paneer/tofu curry with roti and vegetables",
         "Lentil soup with whole grain bread",
+        "Rajma or chole with rice",
       ],
     },
     {
-      meal: "Dinner",
+      meal: "Dinner (Vegetarian)",
       suggestions: [
         "Light meal 2-3 hours before sleep",
         "Steamed vegetables with paneer/tofu",
         "Soup with whole grains",
+        "Khichdi with vegetables",
         "Avoid heavy, spicy foods",
       ],
     },
     {
-      meal: "Snacks",
+      meal: "Snacks (Vegetarian)",
       suggestions: [
-        "Nuts and seeds",
+        "Nuts and seeds (almonds, walnuts)",
         "Fresh fruits",
         "Yogurt with berries",
         "Hummus with vegetables",
+        "Roasted chickpeas",
       ],
     },
   ];
@@ -93,12 +97,62 @@ const Nutrition = () => {
             </div>
           </div>
           <h1 className="mb-2 text-4xl font-bold text-foreground">
-            Nutrition Guide
+            Vegetarian Nutrition Guide
           </h1>
           <p className="text-lg text-muted-foreground">
-            Nourish your body with the right foods during perimenopause
+            Nourish your body with vegetarian foods during perimenopause
           </p>
         </div>
+
+        {/* Supplements Section - Moved to Top */}
+        <Card className="mb-8 border-border/50 bg-gradient-to-br from-primary/5 to-secondary/5 p-6 shadow-soft">
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            Important Supplements
+          </h2>
+          <p className="mb-4 text-muted-foreground">
+            While a balanced vegetarian diet is essential, some supplements can help during perimenopause:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <Fish className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <p className="font-semibold text-card-foreground">Omega-3 Fatty Acids (Algae-based)</p>
+                <p className="text-sm text-muted-foreground">Supports heart health and reduces inflammation. Choose plant-based sources like algae oil.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Milk className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <p className="font-semibold text-card-foreground">Calcium & Vitamin D</p>
+                <p className="text-sm text-muted-foreground">Essential for bone health. Get from dairy, fortified foods, and sunlight.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Leaf className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <p className="font-semibold text-card-foreground">Magnesium</p>
+                <p className="text-sm text-muted-foreground">Helps with sleep and muscle relaxation. Found in nuts, seeds, and whole grains.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Leaf className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <p className="font-semibold text-card-foreground">Iron (Plant-based)</p>
+                <p className="text-sm text-muted-foreground">Important for energy. Get from lentils, spinach, and fortified cereals. Pair with vitamin C for better absorption.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Leaf className="h-5 w-5 text-primary mt-0.5" />
+              <div>
+                <p className="font-semibold text-card-foreground">B12 (Essential for Vegetarians)</p>
+                <p className="text-sm text-muted-foreground">Important for nerve function and energy. Consider supplementation as it's mainly found in animal products.</p>
+              </div>
+            </li>
+          </ul>
+          <p className="mt-4 text-sm italic text-muted-foreground">
+            Always consult with a healthcare provider before starting any supplements
+          </p>
+        </Card>
 
         {/* Nutrition Categories */}
         <div className="mb-8 space-y-6">
@@ -162,41 +216,6 @@ const Nutrition = () => {
           </div>
         </Card>
 
-        {/* Supplements Section */}
-        <Card className="mb-8 border-border/50 bg-gradient-to-br from-primary/5 to-secondary/5 p-6 shadow-soft">
-          <h2 className="mb-4 text-2xl font-bold text-foreground">
-            Important Supplements
-          </h2>
-          <p className="mb-4 text-muted-foreground">
-            While a balanced diet is essential, some supplements can help during perimenopause:
-          </p>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <Fish className="h-5 w-5 text-primary mt-0.5" />
-              <div>
-                <p className="font-semibold text-card-foreground">Omega-3 Fatty Acids</p>
-                <p className="text-sm text-muted-foreground">Supports heart health and reduces inflammation</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Milk className="h-5 w-5 text-primary mt-0.5" />
-              <div>
-                <p className="font-semibold text-card-foreground">Calcium & Vitamin D</p>
-                <p className="text-sm text-muted-foreground">Essential for bone health</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Leaf className="h-5 w-5 text-primary mt-0.5" />
-              <div>
-                <p className="font-semibold text-card-foreground">Magnesium</p>
-                <p className="text-sm text-muted-foreground">Helps with sleep and muscle relaxation</p>
-              </div>
-            </li>
-          </ul>
-          <p className="mt-4 text-sm italic text-muted-foreground">
-            Always consult with a healthcare provider before starting any supplements
-          </p>
-        </Card>
 
         <Button
           onClick={() => navigate("/doctor")}

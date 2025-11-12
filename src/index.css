@@ -8,44 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 30% 98%;
-    --foreground: 260 20% 25%;
+    --background: 0 0% 100%;
+    --foreground: 330 20% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 260 20% 25%;
+    --card-foreground: 330 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 260 20% 25%;
+    --popover-foreground: 330 20% 20%;
 
-    /* Soft lavender as primary */
-    --primary: 260 50% 70%;
+    /* Flo Health pink/magenta primary */
+    --primary: 330 70% 65%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft teal as secondary */
-    --secondary: 180 40% 65%;
+    /* Soft purple secondary */
+    --secondary: 280 50% 70%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 25% 96%;
-    --muted-foreground: 260 15% 45%;
+    --muted: 330 10% 96%;
+    --muted-foreground: 330 15% 45%;
 
-    /* Pastel pink as accent */
-    --accent: 340 60% 80%;
-    --accent-foreground: 260 20% 25%;
+    /* Soft pink accent */
+    --accent: 340 60% 75%;
+    --accent-foreground: 330 20% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 20% 92%;
-    --input: 240 20% 92%;
-    --ring: 260 50% 70%;
+    --border: 330 15% 90%;
+    --input: 330 15% 90%;
+    --ring: 330 70% 65%;
 
-    --radius: 1.5rem;
+    --radius: 1rem;
     
-    --gradient-calm: linear-gradient(135deg, hsl(240 30% 98%), hsl(260 25% 97%));
-    --gradient-hero: linear-gradient(180deg, hsl(260 50% 70% / 0.1), hsl(180 40% 65% / 0.1));
-    --gradient-waves: linear-gradient(180deg, hsl(260 50% 95%), hsl(180 40% 96%), hsl(340 60% 97%));
-    --shadow-soft: 0 8px 32px -8px hsl(260 40% 70% / 0.12);
-    --transition-calm: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --gradient-calm: linear-gradient(135deg, hsl(0 0% 100%), hsl(330 10% 98%));
+    --gradient-hero: linear-gradient(180deg, hsl(330 70% 65% / 0.08), hsl(280 50% 70% / 0.08));
+    --gradient-waves: linear-gradient(180deg, hsl(330 70% 98%), hsl(280 50% 97%), hsl(340 60% 98%));
+    --shadow-soft: 0 4px 20px -4px hsl(330 50% 50% / 0.15);
+    --transition-calm: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -65,38 +65,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 260 25% 12%;
-    --foreground: 240 20% 95%;
+    --background: 330 20% 10%;
+    --foreground: 330 10% 95%;
 
-    --card: 260 20% 15%;
-    --card-foreground: 240 20% 95%;
+    --card: 330 15% 12%;
+    --card-foreground: 330 10% 95%;
 
-    --popover: 260 20% 15%;
-    --popover-foreground: 240 20% 95%;
+    --popover: 330 15% 12%;
+    --popover-foreground: 330 10% 95%;
 
-    --primary: 260 45% 65%;
+    --primary: 330 65% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 35% 60%;
+    --secondary: 280 45% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 260 15% 20%;
-    --muted-foreground: 240 15% 70%;
+    --muted: 330 15% 18%;
+    --muted-foreground: 330 10% 70%;
 
-    --accent: 340 55% 75%;
-    --accent-foreground: 260 25% 12%;
+    --accent: 340 55% 70%;
+    --accent-foreground: 330 20% 10%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 260 15% 22%;
-    --input: 260 15% 22%;
-    --ring: 260 45% 65%;
+    --border: 330 15% 20%;
+    --input: 330 15% 20%;
+    --ring: 330 65% 60%;
     
-    --gradient-calm: linear-gradient(135deg, hsl(260 25% 12%), hsl(240 30% 14%));
-    --gradient-hero: linear-gradient(180deg, hsl(260 45% 65% / 0.1), hsl(180 35% 60% / 0.1));
-    --gradient-waves: linear-gradient(180deg, hsl(260 25% 15%), hsl(180 20% 16%), hsl(340 25% 17%));
-    --shadow-soft: 0 8px 32px -8px hsl(260 40% 20% / 0.3);
+    --gradient-calm: linear-gradient(135deg, hsl(330 20% 10%), hsl(330 25% 12%));
+    --gradient-hero: linear-gradient(180deg, hsl(330 65% 60% / 0.1), hsl(280 45% 65% / 0.1));
+    --gradient-waves: linear-gradient(180deg, hsl(330 20% 12%), hsl(280 20% 13%), hsl(340 20% 14%));
+    --shadow-soft: 0 4px 20px -4px hsl(330 50% 20% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -179,5 +179,16 @@ All colors MUST be HSL.
 
   .animate-breathe {
     animation: breathe 4s ease-in-out infinite;
+  }
+
+  /* Mobile-first scrollable tabs */
+  .scrollable-tabs {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollable-tabs::-webkit-scrollbar {
+    display: none;
   }
 }

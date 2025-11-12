@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Moon, Lightbulb, CheckCircle2, Flame, Weight, Cloud, Activity, MessageCircle, Instagram, ArrowRight, Heart, Wind, Brain, Sparkles } from "lucide-react";
+import { Moon, Lightbulb, CheckCircle2, Flame, Weight, Cloud, Activity, Instagram, ArrowRight, Heart, Wind, Brain, Sparkles } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -25,38 +25,50 @@ const Education = () => {
           </p>
         </div>
         
-        {/* Interactive Timeline */}
-        <Card className="mb-8 border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft">
-          <h2 className="mb-6 text-2xl font-bold text-foreground text-center">
+        {/* Interactive Timeline - Mobile First */}
+        <Card className="mb-8 border border-border/50 bg-card p-4 md:p-6 shadow-sm">
+          <h2 className="mb-4 text-xl md:text-2xl font-bold text-foreground text-center">
             Understanding the Stages
           </h2>
           
           <Tabs defaultValue="perimenopause" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="perimenopause" className="text-sm md:text-base">
-                Perimenopause
-              </TabsTrigger>
-              <TabsTrigger value="menopause" className="text-sm md:text-base">
-                Menopause
-              </TabsTrigger>
-              <TabsTrigger value="postmenopause" className="text-sm md:text-base">
-                Post-Menopause
-              </TabsTrigger>
-            </TabsList>
+            {/* Mobile: Horizontal Scrollable Tabs */}
+            <div className="mb-4 md:mb-6 overflow-x-auto scrollable-tabs -mx-4 px-4 md:mx-0 md:px-0">
+              <TabsList className="inline-flex h-auto w-full min-w-max md:grid md:grid-cols-3 md:w-full md:min-w-0 gap-2 md:gap-1 p-1 bg-muted/50">
+                <TabsTrigger 
+                  value="perimenopause" 
+                  className="flex-shrink-0 px-4 py-2.5 text-xs md:text-sm font-medium rounded-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap"
+                >
+                  Perimenopause
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="menopause" 
+                  className="flex-shrink-0 px-4 py-2.5 text-xs md:text-sm font-medium rounded-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap"
+                >
+                  Menopause
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="postmenopause" 
+                  className="flex-shrink-0 px-4 py-2.5 text-xs md:text-sm font-medium rounded-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap"
+                >
+                  Post-Menopause
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
-            <TabsContent value="perimenopause" className="space-y-4">
-              <div className="rounded-lg bg-primary/5 p-6 border border-primary/20">
-                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
-                  <Moon className="h-5 w-5 text-primary" />
-                  Perimenopause (Transition Phase)
+            <TabsContent value="perimenopause" className="space-y-4 mt-4 md:mt-2">
+              <div className="rounded-lg bg-primary/5 p-4 md:p-6 border border-primary/20">
+                <h3 className="mb-3 text-lg md:text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Moon className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span>Perimenopause (Transition Phase)</span>
                 </h3>
-                <p className="mb-4 text-muted-foreground leading-relaxed">
+                <p className="mb-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                   Usually begins in your 40s. Hormones fluctuate, causing irregular periods and various symptoms. 
                   Can last 4-8 years. This is a natural phase where your body is adapting to hormonal changes.
                 </p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-card-foreground">Common Symptoms:</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
+                  <h4 className="text-sm md:text-base font-semibold text-card-foreground">Common Symptoms:</h4>
+                  <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                       <span>Irregular periods</span>
@@ -75,25 +87,25 @@ const Education = () => {
                     </li>
                   </ul>
                 </div>
-                <p className="mt-4 text-sm italic text-primary/80">
+                <p className="mt-4 text-xs md:text-sm italic text-primary/80">
                   💫 Your body is adapting, this too shall pass.
                 </p>
               </div>
             </TabsContent>
 
-            <TabsContent value="menopause" className="space-y-4">
-              <div className="rounded-lg bg-secondary/5 p-6 border border-secondary/20">
-                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-secondary" />
-                  Menopause (The Milestone)
+            <TabsContent value="menopause" className="space-y-4 mt-4 md:mt-2">
+              <div className="rounded-lg bg-secondary/5 p-4 md:p-6 border border-secondary/20">
+                <h3 className="mb-3 text-lg md:text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Heart className="h-5 w-5 text-secondary flex-shrink-0" />
+                  <span>Menopause (The Milestone)</span>
                 </h3>
-                <p className="mb-4 text-muted-foreground leading-relaxed">
+                <p className="mb-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                   Officially reached after 12 consecutive months without a period. Average age is 51, 
                   but can occur earlier or later. This is a significant milestone in your life journey.
                 </p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-card-foreground">What to Expect:</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
+                  <h4 className="text-sm md:text-base font-semibold text-card-foreground">What to Expect:</h4>
+                  <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
                       <span>Periods stop completely</span>
@@ -108,25 +120,25 @@ const Education = () => {
                     </li>
                   </ul>
                 </div>
-                <p className="mt-4 text-sm italic text-secondary/80">
+                <p className="mt-4 text-xs md:text-sm italic text-secondary/80">
                   💫 You've reached an important milestone. Celebrate your strength.
                 </p>
               </div>
             </TabsContent>
 
-            <TabsContent value="postmenopause" className="space-y-4">
-              <div className="rounded-lg bg-accent/5 p-6 border border-accent/20">
-                <h3 className="mb-3 text-xl font-semibold text-card-foreground flex items-center gap-2">
-                  <Sparkles className="h-5 w-5 text-accent" />
-                  Post-Menopause (Life After)
+            <TabsContent value="postmenopause" className="space-y-4 mt-4 md:mt-2">
+              <div className="rounded-lg bg-accent/5 p-4 md:p-6 border border-accent/20">
+                <h3 className="mb-3 text-lg md:text-xl font-semibold text-card-foreground flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>Post-Menopause (Life After)</span>
                 </h3>
-                <p className="mb-4 text-muted-foreground leading-relaxed">
+                <p className="mb-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                   The years following menopause. Some symptoms may ease, but bone health and heart health 
                   become important focuses. This is a time for continued self-care and wellness.
                 </p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-card-foreground">Focus Areas:</h4>
-                  <ul className="space-y-1.5 text-muted-foreground">
+                  <h4 className="text-sm md:text-base font-semibold text-card-foreground">Focus Areas:</h4>
+                  <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                       <span>Bone density maintenance</span>
@@ -141,7 +153,7 @@ const Education = () => {
                     </li>
                   </ul>
                 </div>
-                <p className="mt-4 text-sm italic text-accent/80">
+                <p className="mt-4 text-xs md:text-sm italic text-accent/80">
                   💫 Your journey continues with wisdom and grace.
                 </p>
               </div>
@@ -151,103 +163,107 @@ const Education = () => {
 
         {/* Symptom-Specific Modules */}
         <div className="mb-8">
-          <h2 className="mb-6 text-2xl font-bold text-foreground text-center">
+          <h2 className="mb-4 text-xl md:text-2xl font-bold text-foreground text-center">
             Symptom-Specific Support
           </h2>
-          <p className="mb-6 text-center text-muted-foreground">
+          <p className="mb-6 text-sm md:text-base text-center text-muted-foreground px-2">
             Explore detailed guidance for managing specific symptoms with supplements, nutrition, lifestyle tips, and calming practices
           </p>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-4 md:gap-6 md:grid-cols-2">
             {/* Sleep Module */}
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-full bg-primary/20 p-3">
-                  <Moon className="h-6 w-6 text-primary" />
+            <Card className="border border-border/50 bg-card p-4 md:p-6 shadow-sm hover:shadow-md transition-all duration-200">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-primary/20 p-2 md:p-3">
+                  <Moon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-base md:text-xl font-semibold text-card-foreground">
                   Sleep Support
                 </h3>
               </div>
-              <p className="mb-4 text-sm text-muted-foreground">
+              <p className="mb-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Detailed content plus calming meditations, nature sounds for sleep, and nutrition tips to help you rest peacefully.
               </p>
               <Button
                 onClick={() => navigate("/symptoms/sleep")}
                 variant="outline"
-                className="w-full"
+                size="sm"
+                className="w-full text-xs md:text-sm"
               >
                 Explore Sleep Solutions
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
               </Button>
             </Card>
 
             {/* Hot Flashes Module */}
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-full bg-accent/20 p-3">
-                  <Flame className="h-6 w-6 text-accent" />
+            <Card className="border border-border/50 bg-card p-4 md:p-6 shadow-sm hover:shadow-md transition-all duration-200">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-accent/20 p-2 md:p-3">
+                  <Flame className="h-5 w-5 md:h-6 md:w-6 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-base md:text-xl font-semibold text-card-foreground">
                   Hot Flashes
                 </h3>
               </div>
-              <p className="mb-4 text-sm text-muted-foreground">
+              <p className="mb-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Breathing exercises, cooling advice, and mindset affirmations to help you manage hot flashes with ease.
               </p>
               <Button
                 onClick={() => navigate("/symptoms/hot-flashes")}
                 variant="outline"
-                className="w-full"
+                size="sm"
+                className="w-full text-xs md:text-sm"
               >
                 Learn Cooling Techniques
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
               </Button>
             </Card>
 
             {/* Weight & Metabolism Module */}
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-full bg-secondary/20 p-3">
-                  <Weight className="h-6 w-6 text-secondary" />
+            <Card className="border border-border/50 bg-card p-4 md:p-6 shadow-sm hover:shadow-md transition-all duration-200">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-secondary/20 p-2 md:p-3">
+                  <Weight className="h-5 w-5 md:h-6 md:w-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-base md:text-xl font-semibold text-card-foreground">
                   Weight & Metabolism
                 </h3>
               </div>
-              <p className="mb-4 text-sm text-muted-foreground">
+              <p className="mb-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Practical diet & exercise advice, mindful eating guides, and metabolism support strategies.
               </p>
               <Button
                 onClick={() => navigate("/symptoms/weight")}
                 variant="outline"
-                className="w-full"
+                size="sm"
+                className="w-full text-xs md:text-sm"
               >
                 Discover Weight Management
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
               </Button>
             </Card>
 
             {/* Emotional Wellness Module */}
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm p-6 shadow-soft hover:shadow-lg transition-all duration-300">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-full bg-primary/20 p-3">
-                  <Brain className="h-6 w-6 text-primary" />
+            <Card className="border border-border/50 bg-card p-4 md:p-6 shadow-sm hover:shadow-md transition-all duration-200">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="rounded-full bg-primary/20 p-2 md:p-3">
+                  <Brain className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-base md:text-xl font-semibold text-card-foreground">
                   Emotional Wellness
                 </h3>
               </div>
-              <p className="mb-4 text-sm text-muted-foreground">
+              <p className="mb-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Mood tracking, spiritual stories or quotes, stress relief techniques, and emotional support.
               </p>
               <Button
                 onClick={() => navigate("/symptoms/emotional")}
                 variant="outline"
-                className="w-full"
+                size="sm"
+                className="w-full text-xs md:text-sm"
               >
                 Nurture Your Mind
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
               </Button>
             </Card>
           </div>
@@ -352,51 +368,6 @@ const Education = () => {
           Connect with a Specialist
         </Button>
 
-        {/* Community Support */}
-        <Card className="border-border/50 bg-gradient-to-br from-secondary/5 to-accent/5 p-8 shadow-soft">
-          <h2 className="mb-4 text-2xl font-bold text-foreground text-center">
-            Join Our Support Community
-          </h2>
-          <p className="mb-6 text-center text-muted-foreground">
-            Connect with women at all stages - perimenopause, menopause, and post-menopause. 
-            Share experiences, ask questions, and get peer support in a safe, understanding space.
-          </p>
-
-          <div className="space-y-3">
-            <Button
-              asChild
-              className="w-full bg-[#25D366] text-white hover:bg-[#25D366]/90"
-              size="lg"
-            >
-              <a
-                href="https://wa.me/group_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Join WhatsApp Support Group
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              variant="outline"
-              className="w-full border-border hover:bg-accent"
-              size="lg"
-            >
-              <a
-                href="https://www.instagram.com/nishu_health"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                <Instagram className="h-5 w-5" />
-                Follow Us on Instagram
-              </a>
-            </Button>
-          </div>
-        </Card>
       </div>
     </div>
   );
