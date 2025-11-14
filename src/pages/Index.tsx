@@ -67,45 +67,6 @@ const Index = () => {
             </p>
           </Card>
 
-          {/* Quick Actions */}
-          <div className="mb-6">
-            <h2 className="mb-4 text-xl font-bold text-foreground">
-              Quick Actions
-            </h2>
-            <div className="grid grid-cols-2 gap-3">
-              {quickActions.map((action, idx) => {
-                const Icon = action.icon;
-                return (
-                  <Card
-                    key={idx}
-                    className="border border-border/50 bg-card p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
-                    onClick={action.action}
-                  >
-                    <div className="mb-2 flex items-center gap-2">
-                      <div className={`rounded-full p-2 ${
-                        action.color === 'primary' ? 'bg-primary/10' :
-                        action.color === 'secondary' ? 'bg-secondary/10' :
-                        'bg-accent/10'
-                      }`}>
-                        <Icon className={`h-4 w-4 ${
-                          action.color === 'primary' ? 'text-primary' :
-                          action.color === 'secondary' ? 'text-secondary' :
-                          'text-accent'
-                        }`} />
-                      </div>
-                      <h3 className="text-sm font-semibold text-card-foreground">
-                        {action.title}
-                      </h3>
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      {action.description}
-                    </p>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Follow Instagram */}
           <Card className="mb-6 border border-border/50 bg-card p-4 shadow-sm">
             <Button
