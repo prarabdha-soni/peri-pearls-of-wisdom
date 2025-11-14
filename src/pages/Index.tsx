@@ -35,7 +35,7 @@ const Index = () => {
             <img 
               src="/estradiol.png" 
               alt="Estradiol Tablets" 
-              className="w-64 h-auto object-contain"
+              className="w-96 h-auto object-contain"
             />
           </div>
 
@@ -51,7 +51,7 @@ const Index = () => {
             </h2>
 
             <div className="mb-2">
-              <span className="text-3xl font-bold text-primary">Starting at $39.99</span>
+              <span className="text-3xl font-bold text-primary">Starting at ₹600</span>
             </div>
 
             <p className="text-muted-foreground mb-6">
