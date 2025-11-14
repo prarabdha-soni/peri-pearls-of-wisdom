@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Instagram, Stethoscope } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -12,6 +13,13 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="mb-8 text-center">
+          <div className="mb-4 flex justify-center">
+            <img 
+              src={logo} 
+              alt="Nishu Health Logo" 
+              className="h-16 w-auto md:h-20"
+            />
+          </div>
           <h1 className="mb-4 text-3xl font-bold text-foreground">
             Nishu Health
           </h1>
