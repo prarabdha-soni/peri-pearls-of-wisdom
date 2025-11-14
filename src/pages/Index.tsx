@@ -67,41 +67,6 @@ const Index = () => {
             </p>
           </Card>
 
-          {/* Insurance Information - Prominent */}
-          <Card className="mb-6 border-2 border-primary/20 bg-card p-6 shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="rounded-full bg-primary/20 p-3 flex-shrink-0">
-                <Shield className="h-6 w-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h2 className="mb-2 text-xl font-bold text-foreground">
-                  Insurance Coverage
-                </h2>
-                <p className="mb-3 text-sm text-muted-foreground">
-                  We accept most major insurance plans. Check your coverage before booking a consultation.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    <CheckCircle2 className="h-3 w-3" />
-                    Most Insurance Accepted
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-secondary/10 px-3 py-1 text-xs font-medium text-secondary">
-                    <CheckCircle2 className="h-3 w-3" />
-                    Telehealth Coverage
-                  </span>
-                </div>
-                <Button
-                  onClick={() => navigate("/doctor")}
-                  variant="outline"
-                  size="sm"
-                  className="w-full sm:w-auto"
-                >
-                  Check Coverage
-                </Button>
-              </div>
-            </div>
-          </Card>
-
           {/* Quick Actions */}
           <div className="mb-6">
             <h2 className="mb-4 text-xl font-bold text-foreground">
