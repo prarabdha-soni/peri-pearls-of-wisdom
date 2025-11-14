@@ -67,9 +67,9 @@ const Index = () => {
             </p>
           </Card>
 
-          {/* Follow Instagram */}
-          <Card className="mb-6 border border-border/50 bg-card p-4 shadow-sm">
-            <Button
+        {/* Follow Instagram */}
+        <Card className="max-w-2xl mx-auto mb-6 border border-border/50 bg-card p-6 shadow-sm">
+          <Button
               asChild
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg"
               size="default"
