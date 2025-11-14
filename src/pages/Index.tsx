@@ -35,7 +35,7 @@ const Index = () => {
             <img 
               src="/estradiol.png" 
               alt="Estradiol Tablets" 
-              className="w-96 h-auto object-contain"
+              className="w-full h-auto object-contain"
             />
           </div>
 
