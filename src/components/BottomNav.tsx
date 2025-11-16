@@ -8,9 +8,6 @@ const BottomNav = () => {
 
   const navItems = [
     { path: "/", icon: Home, label: "Home" },
-    { path: "/education", icon: BookOpen, label: "Education" },
-    { path: "/nutrition", icon: UtensilsCrossed, label: "Nutrition" },
-    { path: "/treatment", icon: Pill, label: "Treatment" },
     { path: "/doctor", icon: Stethoscope, label: "Doctor" },
     { path: "/profile", icon: User, label: "Profile" },
   ];
