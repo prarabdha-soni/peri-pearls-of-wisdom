@@ -9,27 +9,27 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-calm pb-20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-calm pb-24">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Hero Section */}
-        <div className="mb-12 text-center">
-          <div className="mb-4 flex justify-center">
+        <div className="mb-16 text-center">
+          <div className="mb-6 flex justify-center">
             <img 
               src={logo} 
               alt="Nishu Health Logo" 
-              className="h-16 w-auto md:h-20"
+              className="h-20 w-auto md:h-24"
             />
           </div>
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 px-4 py-2 text-sm">
+          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 px-6 py-2.5 text-sm font-medium">
             Virtual Clinic for Female Health Care
           </Badge>
-          <h1 className="mb-4 text-3xl md:text-4xl font-bold text-foreground">
+          <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
             Connect with Doctors
             <br />
             <span className="text-primary">Anytime, Anywhere</span>
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
-            Get personalized pcod/pcos/perimenopause treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
+            Get personalized PCOD/PCOS/perimenopause treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
           </p>
           
           <Button 
@@ -57,35 +57,35 @@ const Index = () => {
         </div>
 
         {/* How It Works */}
-        <Card className="max-w-2xl mx-auto mb-12 overflow-hidden shadow-soft border-border/50">
-          <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">How Our Virtual Clinic Works</h2>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+        <Card className="max-w-3xl mx-auto mb-16 overflow-hidden shadow-lg border-border/50">
+          <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-10 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">How Our Virtual Clinic Works</h2>
+            <div className="space-y-8">
+              <div className="flex gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-sm">
                   1
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Connect on WhatsApp</h3>
-                  <p className="text-muted-foreground text-sm">Message us directly to discuss your symptoms and concerns</p>
+                  <h3 className="font-bold text-lg text-foreground mb-2">Connect on WhatsApp</h3>
+                  <p className="text-muted-foreground leading-relaxed">Message us directly to discuss your symptoms and concerns with our healthcare specialists</p>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+              <div className="flex gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-sm">
                   2
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Get Diagnosed</h3>
-                  <p className="text-muted-foreground text-sm">Our doctors will assess your condition and create a treatment plan</p>
+                  <h3 className="font-bold text-lg text-foreground mb-2">Get Diagnosed</h3>
+                  <p className="text-muted-foreground leading-relaxed">Our experienced doctors will assess your condition and create a personalized treatment plan</p>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+              <div className="flex gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-sm">
                   3
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Receive Treatment</h3>
-                  <p className="text-muted-foreground text-sm">Get prescribed medications delivered to your home</p>
+                  <h3 className="font-bold text-lg text-foreground mb-2">Receive Treatment</h3>
+                  <p className="text-muted-foreground leading-relaxed">Get prescribed medications delivered discreetly to your home with ongoing support</p>
                 </div>
               </div>
             </div>
@@ -93,19 +93,19 @@ const Index = () => {
         </Card>
 
         {/* Product Card - Alloy Health Style */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4 text-center">Our Treatments (with Doctor Consultation)</h2>
-          <Card className="overflow-hidden shadow-soft border-border/50 relative mb-6">
+        <div className="max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">Our Treatments <span className="text-muted-foreground text-2xl md:text-3xl">(with Doctor Consultation)</span></h2>
+          <Card className="overflow-hidden shadow-lg border-border/50 relative mb-8 hover:shadow-xl transition-shadow duration-300">
           {/* Doctor Access Badge */}
-          <div className="absolute top-4 right-4 z-10">
-            <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2 rounded-full flex items-center gap-2">
+          <div className="absolute top-6 right-6 z-10">
+            <Badge className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
               <Stethoscope className="h-4 w-4" />
-              <span className="text-xs font-semibold">INCLUDES UNLIMITED DOCTOR ACCESS</span>
+              <span className="text-xs font-bold tracking-wide">INCLUDES UNLIMITED DOCTOR ACCESS</span>
             </Badge>
           </div>
 
           {/* Product Image */}
-          <div className="bg-[hsl(30,25%,90%)] dark:bg-muted p-12 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-[hsl(30,25%,95%)] to-[hsl(30,25%,88%)] dark:bg-muted p-16 flex items-center justify-center">
             <img 
               src="/estradiol.png" 
               alt="Estradiol Tablets" 
@@ -114,31 +114,31 @@ const Index = () => {
           </div>
 
           {/* Product Details */}
-          <div className="p-8">
-            <div className="flex gap-2 mb-4">
-              <Badge variant="secondary" className="rounded-full">Most Popular</Badge>
-              <Badge variant="outline" className="rounded-full">Daily Pill</Badge>
+          <div className="p-10 md:p-12">
+            <div className="flex gap-3 mb-5">
+              <Badge variant="secondary" className="rounded-full px-4 py-1.5 font-semibold">Most Popular</Badge>
+              <Badge variant="outline" className="rounded-full px-4 py-1.5">Daily Pill</Badge>
             </div>
 
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5">
               Estradiol Pill
             </h2>
 
-            <div className="mb-2">
-              <span className="text-3xl font-bold text-primary">Starting at ₹600</span>
+            <div className="mb-3">
+              <span className="text-4xl font-bold text-primary">Starting at ₹600</span>
             </div>
 
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-8 text-lg">
               (30 days of treatment)
             </p>
 
-            <p className="text-foreground leading-relaxed mb-8">
+            <p className="text-foreground leading-relaxed mb-10 text-lg">
               So long, symptoms! The estradiol pill is proven to provide effective, fast relief from your menopause symptoms. The estradiol we offer is FDA-approved, bioidentical & plant-based.
             </p>
 
             <Button 
               size="lg" 
-              className="w-full rounded-full shadow-soft hover:shadow-lg transition-all"
+              className="w-full rounded-full shadow-lg hover:shadow-xl transition-all text-lg py-6"
               onClick={() => navigate('/consult')}
             >
               Get Started
@@ -147,9 +147,9 @@ const Index = () => {
         </Card>
 
         {/* Daily Cortisol Support Product Card */}
-        <Card className="max-w-2xl mx-auto mb-8 overflow-hidden shadow-soft border-border/50">
+        <Card className="max-w-3xl mx-auto mb-8 overflow-hidden shadow-lg border-border/50 hover:shadow-xl transition-shadow duration-300">
           {/* Product Image */}
-          <div className="bg-[hsl(30,25%,90%)] dark:bg-muted p-12 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-[hsl(30,25%,95%)] to-[hsl(30,25%,88%)] dark:bg-muted p-16 flex items-center justify-center">
             <img 
               src="/sleep.png" 
               alt="Daily Cortisol Support" 
@@ -158,31 +158,31 @@ const Index = () => {
           </div>
 
           {/* Product Details */}
-          <div className="p-8">
-            <div className="flex gap-2 mb-4">
-              <Badge variant="secondary" className="rounded-full">Sleep Support</Badge>
-              <Badge variant="outline" className="rounded-full">Daily Supplement</Badge>
+          <div className="p-10 md:p-12">
+            <div className="flex gap-3 mb-5">
+              <Badge variant="secondary" className="rounded-full px-4 py-1.5 font-semibold">Sleep Support</Badge>
+              <Badge variant="outline" className="rounded-full px-4 py-1.5">Daily Supplement</Badge>
             </div>
 
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5">
               Daily Cortisol Support
             </h2>
 
-            <div className="mb-2">
-              <span className="text-3xl font-bold text-primary">Starting at ₹600</span>
+            <div className="mb-3">
+              <span className="text-4xl font-bold text-primary">Starting at ₹600</span>
             </div>
 
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-8 text-lg">
               (30 days of treatment)
             </p>
 
-            <p className="text-foreground leading-relaxed mb-8">
+            <p className="text-foreground leading-relaxed mb-10 text-lg">
               A daily supplement clinically formulated to support calm focus, better sleep, cognitive clarity, and emotional resilience.
             </p>
 
             <Button 
               size="lg" 
-              className="w-full rounded-full shadow-soft hover:shadow-lg transition-all"
+              className="w-full rounded-full shadow-lg hover:shadow-xl transition-all text-lg py-6"
               onClick={() => navigate('/consult')}
             >
               Get Started
@@ -192,9 +192,9 @@ const Index = () => {
         </div>
 
         {/* Video Section */}
-        <Card className="max-w-2xl mx-auto mb-8 overflow-hidden shadow-soft border-border/50">
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-foreground mb-4">
+        <Card className="max-w-3xl mx-auto mb-10 overflow-hidden shadow-lg border-border/50">
+          <div className="p-8 md:p-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
               Recognizing the First Signs of Perimenopause
             </h3>
           </div>
@@ -209,19 +209,19 @@ const Index = () => {
         </Card>
 
         {/* Follow Instagram */}
-        <Card className="max-w-2xl mx-auto border border-border/50 bg-card p-6 shadow-sm">
+        <Card className="max-w-3xl mx-auto border border-border/50 bg-card p-8 md:p-10 shadow-lg">
           <Button
             asChild
-            className="w-full rounded-full shadow-soft hover:shadow-lg transition-all"
+            className="w-full rounded-full shadow-lg hover:shadow-xl transition-all text-lg py-6"
             size="lg"
           >
             <a
               href="https://www.instagram.com/nishu_health"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-3"
             >
-              <Instagram className="h-5 w-5" />
+              <Instagram className="h-6 w-6" />
               Follow @nishu_health on Instagram
             </a>
           </Button>
