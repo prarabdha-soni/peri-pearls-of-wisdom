@@ -29,7 +29,7 @@ const Index = () => {
             <span className="text-primary">Anytime, Anywhere</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
-            Get personalized PCOD/PCOS/perimenopause treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
+            Get personalized Perimenopause, PCOD, PCOS treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
           </p>
           
           <Button 
@@ -100,7 +100,7 @@ const Index = () => {
           <div className="absolute top-6 right-6 z-10">
             <Badge className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
               <Stethoscope className="h-4 w-4" />
-              <span className="text-xs font-bold tracking-wide">INCLUDES UNLIMITED DOCTOR ACCESS</span>
+              <span className="text-xs font-bold tracking-wide">Coming Soon</span>
             </Badge>
           </div>
 
