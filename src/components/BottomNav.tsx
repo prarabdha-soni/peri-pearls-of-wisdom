@@ -9,7 +9,6 @@ const BottomNav = () => {
   const navItems = [
     { path: "/", icon: Home, label: "Home" },
     { path: "/doctor", icon: Stethoscope, label: "Doctor" },
-    { path: "/profile", icon: User, label: "Profile" },
   ];
 
   const isActive = (path: string) => {
