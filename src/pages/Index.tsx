@@ -80,6 +80,50 @@ const Index = () => {
           </div>
         </Card>
 
+        {/* Daily Cortisol Support Product Card */}
+        <Card className="max-w-2xl mx-auto mb-8 overflow-hidden shadow-soft border-border/50">
+          {/* Product Image */}
+          <div className="bg-[hsl(30,25%,90%)] dark:bg-muted p-12 flex items-center justify-center">
+            <img 
+              src="/sleep.png" 
+              alt="Daily Cortisol Support" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* Product Details */}
+          <div className="p-8">
+            <div className="flex gap-2 mb-4">
+              <Badge variant="secondary" className="rounded-full">Sleep Support</Badge>
+              <Badge variant="outline" className="rounded-full">Daily Supplement</Badge>
+            </div>
+
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Daily Cortisol Support
+            </h2>
+
+            <div className="mb-2">
+              <span className="text-3xl font-bold text-primary">Starting at ₹600</span>
+            </div>
+
+            <p className="text-muted-foreground mb-6">
+              (30 days of treatment)
+            </p>
+
+            <p className="text-foreground leading-relaxed mb-8">
+              A daily supplement clinically formulated to support calm focus, better sleep, cognitive clarity, and emotional resilience.
+            </p>
+
+            <Button 
+              size="lg" 
+              className="w-full rounded-full shadow-soft hover:shadow-lg transition-all"
+              onClick={() => navigate('/consult')}
+            >
+              Get Started
+            </Button>
+          </div>
+        </Card>
+
         {/* Video Section */}
         <Card className="max-w-2xl mx-auto mb-8 overflow-hidden shadow-soft border-border/50">
           <div className="p-6">
