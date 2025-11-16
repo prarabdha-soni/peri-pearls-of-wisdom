@@ -21,15 +21,15 @@ const Index = () => {
             />
           </div>
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 px-4 py-2 text-sm">
-            Virtual Clinic for Perimenopause Care
+            Virtual Clinic for Female Health Care
           </Badge>
-          <h1 className="mb-4 text-4xl md:text-5xl font-bold text-foreground">
+          <h1 className="mb-4 text-3xl md:text-4xl font-bold text-foreground">
             Connect with Doctors
             <br />
             <span className="text-primary">Anytime, Anywhere</span>
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
-            Get personalized perimenopause treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
+            Get personalized pcod/pcos/perimenopause treatment from experienced specialists through WhatsApp consultations. Includes prescription medications delivered to your door.
           </p>
           
           <Button 
