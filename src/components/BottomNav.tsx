@@ -1,5 +1,11 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { Home, BookOpen, UtensilsCrossed, Stethoscope, User, Pill } from "lucide-react";
+import {
+  Home,
+  MessageCircle,
+  PhoneCall,
+  Leaf,
+  Dumbbell,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
@@ -7,27 +13,51 @@ const BottomNav = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: "/", icon: Home, label: "Home" },
-    { path: "/doctor", icon: Stethoscope, label: "Doctor" },
+    {
+      key: "home",
+      icon: Home,
+      label: "Home",
+      onClick: () => navigate("/"),
+      isActive: location.pathname === "/",
+    },
+    {
+      key: "chat-doctor",
+      icon: MessageCircle,
+      label: "Chat Doctor",
+      onClick: () => window.open("https://wa.me/919266106798", "_blank"),
+    },
+    {
+      key: "call-doctor",
+      icon: PhoneCall,
+      label: "Call Doctor",
+      onClick: () => {
+        window.location.href = "tel:+919266106798";
+      },
+    },
+    {
+      key: "ayurvedic",
+      icon: Leaf,
+      label: "Ayurvedic",
+      onClick: () => window.open("https://wa.me/919266106798?text=I%20want%20to%20consult%20an%20Ayurvedic%20expert", "_blank"),
+    },
+    {
+      key: "fitness",
+      icon: Dumbbell,
+      label: "Fitness",
+      onClick: () => window.open("https://wa.me/919266106798?text=I%20want%20to%20consult%20a%20fitness%20expert", "_blank"),
+    },
   ];
-
-  const isActive = (path: string) => {
-    if (path === "/") {
-      return location.pathname === "/";
-    }
-    return location.pathname.startsWith(path);
-  };
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-border/50 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
       <div className="mx-auto flex max-w-md items-center justify-around px-2 py-2">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const active = isActive(item.path);
+          const active = item.isActive;
           return (
             <button
-              key={item.path}
-              onClick={() => navigate(item.path)}
+              key={item.key}
+              onClick={item.onClick}
               className={cn(
                 "flex flex-col items-center justify-center gap-1 rounded-lg px-3 py-2 transition-all duration-200",
                 active
